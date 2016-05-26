@@ -1,0 +1,8 @@
+<h1>New Post</h1>
+
+<%= form_for :post, url: '/posts' do |f| %>
+
+  Content: <%= f.text_field :content %>
+  <%= f.submit "Submit" %>
+
+<% end %>

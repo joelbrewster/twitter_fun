@@ -1,0 +1,26 @@
+<% if @posts %>
+<div id="controls">
+  <input id="poster" type="text">
+  <button id="btn">Find Posts By</button>
+</div>
+
+<div id="posts">
+  <h3>These are some wonderful posts from our users:</h3>
+  <% @posts.each do |t| %>
+  <p class="<%=t.user.name%>"><%= t.content%> - posted by <%= t.user.name %> (<%=t.user.email %>)</p>
+<% end %>
+</div>
+<% end %>
+
+<div id="quote">
+  <%= @quote[0]['content'] %>
+</div>
+
+<div id="chuck">
+  <%= %>
+</div>
+
+<div id="catfact">
+  <%= %>
+</div>
+
