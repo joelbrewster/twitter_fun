@@ -13,7 +13,9 @@
 <% end %>
 
 <div id="quote">
-  <%= @quote[0]['content'] %>
+  <% for i in 0..5 %>
+    <%= @quote[i]['content'].html_safe %>
+  <% end %>
 </div>
 
 <div id="chuck">
