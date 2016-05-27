@@ -1,8 +1,10 @@
+/* Normalise */
 body {
   margin: 0;
   padding: none;
 }
 
+/* Layout */
 #top-menu {
   display: flex;
   justify-content: space-between;
@@ -11,20 +13,26 @@ body {
   border-style: dashed;
 }
 
+#top-menu > :first-child {
+  padding-left: 20px;
+  border-radius: 50%;
+}
+
+#top-menu img {
+  width: 10%;
+}
+
 #top-menu p {
   padding-right: 20px;
 }
 
-#top-menu img {
-  width: 15%;
-  padding-left: 20px;
+#posts {
+  width: 100%;
+  padding: 5%;
 }
 
-#top-menu > :first-child {
-  border-radius: 50%;
-  padding-left: 20px;
-}
+/* index view */
 
-h1 {
-  font-family: 'Days One', sans-serif;
+.stuff {
+  display: none;
 }

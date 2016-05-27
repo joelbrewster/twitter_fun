@@ -2,6 +2,9 @@
 <div id="controls">
   <input id="poster" type="text">
   <button id="btn">Find Posts By</button>
+  <button id="btn-quote">Design Quote</button>
+  <button id="btn-chuck">Chuck Norris</button>
+  <button id="btn-cat">Cat</button>
 </div>
 
 <div id="posts">
@@ -12,19 +15,21 @@
 </div>
 <% end %>
 
-<div id="quote">
+<div id="quote", class='stuff'>
   <% for i in 0..5 %>
     <%= @quote[i]['content'].html_safe %>
   <% end %>
 </div>
 
-<div id="chuck">
-  <% for i in 0.5 %>
-    <%= @chuck['value'][i]['joke'].html_safe %>
+<div id="chuck", class='stuff'>
+  <% for i in 0..5 %>
+    <p><%= @chuck['value'][i]['joke'].html_safe %></p>
   <% end %>
 </div>
 
-<div id="catfact">
-  <%= %>
+<div id="catfact", class='stuff'>
+  <% for i in 0..5 %>
+    <p><%= @catfact[:facts][i] %></p>
+  <% end %>
 </div>
 

@@ -16,7 +16,8 @@ class PostsController < ApplicationController
     #making accessible by ERB under a variable
     @quote = quote
     @chuck = chuck
-    @catfact = catfact
+    # This is bad
+    @catfact = eval(catfact)
   end
 
   # GET /posts
