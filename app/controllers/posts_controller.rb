@@ -44,6 +44,9 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.content = post_params[:content]
+    @post.user_id = @current_user.id
+    @post.save
 
     respond_to do |format|
       if @post.save
@@ -59,7 +62,13 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+
+    @post.content = post_params[:content]
+    @post.user_id = @current_user.id
+    @post.save
+
     respond_to do |format|
+      @post = Post.find(params[:id])
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
