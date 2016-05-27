@@ -19,7 +19,9 @@
 </div>
 
 <div id="chuck">
-  <%= %>
+  <% for i in 0.5 %>
+    <%= @chuck['value'][i]['joke'].html_safe %>
+  <% end %>
 </div>
 
 <div id="catfact">
